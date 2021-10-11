@@ -2,6 +2,7 @@ package com.company.sortingAlgorithms;
 
 
 /*T - O(nlogn) --for all cases
+
 * Space- O(n) - disadvantage
 *  */
 public class MergeSort {

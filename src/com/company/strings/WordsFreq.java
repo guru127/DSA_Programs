@@ -14,7 +14,7 @@ public class WordsFreq {
 
         Map<Character , Integer> mp = new HashMap<>();
         for(int i=0; i<cr.length; i++){
-            if(mp.containsKey(cr[i])){
+            if(mp.containsKey(cr[i])&& cr[i]!=' '){
                 mp.put(cr[i], mp.get(cr[i])+1);
             }else{
                 mp.put(cr[i], 1);
@@ -23,11 +23,20 @@ public class WordsFreq {
         System.out.println("printing each char freq ");
         mp.forEach((k,v)-> System.out.println(k+"  :  "+v));
 
-        System.out.println("printing dup char freq  ");
+
+        System.out.println("   ****  ");
         for (Map.Entry entry: mp.entrySet()){
           if((int)entry.getValue()>1) {
               System.out.println(entry.getKey()+"  :  "+ entry.getValue());
           }
+        }
+
+
+        System.out.println(" printing dup char freq    ");
+        for (Map.Entry en : mp.entrySet()){
+            if ((int)en.getValue()>1){
+                System.out.println(en.getKey()+"     "+en.getValue());
+            }
         }
 
     /*    Map<String,Integer> mp=new TreeMap<>();

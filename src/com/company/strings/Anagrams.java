@@ -21,16 +21,17 @@ public class Anagrams {
         Arrays.sort(str2);
 
         // Compare sorted strings
-        for (int i = 0; i < n1; i++)
-            if (str1[i] != str2[i])
+        for (int i = 0; i < n1; i++) {
+            if (str1[i] != str2[i]) {
                 return false;
-
+            }
+        }
         return true;
     }
-    public static void main(String args[])
-    {
-        char str1[] = { 't', 'e', 's', 't' };
-        char str2[] = { 't', 't', 'e', 'w' };
+    public static void main(String args[]) {
+        char str1[] = {'t', 'e', 's', 't'};
+        char str2[] = {'t', 't', 'e', 'w'};
+
 
         // Function Call
         if (areAnagram(str1, str2))
@@ -39,5 +40,29 @@ public class Anagrams {
         else
             System.out.println("The two strings are not"
                     + " anagram of each other");
+
+        String s1 = "abcd";
+        String s2 = "bcda";
+        checkAnagram(s1, s2);
+    }
+
+    private static void checkAnagram(String s1, String s2) {
+        System.out.println("String anagram checking");
+        if(s1.length()!=s2.length()){
+            System.out.println("not anagrams    ");
+            return;
+        }
+        char[] s1a=s1.toCharArray();
+        char[] s2a=s2.toCharArray();
+
+        Arrays.sort(s1a);
+        Arrays.sort(s2a);
+        for (int i=0; i<s1.length(); i++){
+            if(s1a[i]!=s2a[i]){
+                System.out.println("not a Anagram   ");
+                return;
+            }
+        }
+        System.out.println("its an Anagram");
     }
 }

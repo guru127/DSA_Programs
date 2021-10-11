@@ -67,5 +67,35 @@ public class BalancedBrackets {
             System.out.println("Balanced ");
         else
             System.out.println("Not Balanced ");
+
+        System.out.println("checking.................");
+        checkBalence(expr);
+    }
+
+    private static void checkBalence(String expr) {
+        Stack<Character> br= new Stack<>();
+        for (int i =0; i<expr.length(); i++){
+            char x= expr.charAt(i);
+        if(x=='(' || x=='[' || x=='{'){
+            br.push(x);
+            continue;
+        }
+        if(x==')' || x==']' || x=='}'){
+            if(br.isEmpty()){
+                System.out.println("not balanced  ");
+                return;
+            }
+            char y=br.pop();
+            System.out.println(y+"  "+ x);
+            if(y==x){
+                    System.out.println(" balanced  ");
+                    return;
+            }else{
+                System.out.println("balanced................");
+                return;
+            }
+        }
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 package com.company.searchingAlgorithms;
 
 import java.util.Scanner;
+// Arrays should be sorted one
 
 public class BinarSearch {
 // to get unsuccessful attempts
@@ -17,12 +18,13 @@ public class BinarSearch {
             }
             else {
                 count++;
-            }
+
             if (inputArr[m]<key){
                 s=m+1;
             }
             if(inputArr[m]>key){
                 e=m-1;
+            }
             }
         }
         return count;

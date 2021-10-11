@@ -1,6 +1,7 @@
 package com.company.sortingAlgorithms;
 
-// t-- O(n*2)
+// t-- O(n*2) for all cases
+//
 
 class SelectionSort {
     void sort(int arr[])
