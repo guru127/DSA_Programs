@@ -1,5 +1,5 @@
 
-package com.company;
+package com.company.arrays;
 
 import java.util.*;
 

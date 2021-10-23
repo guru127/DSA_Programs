@@ -1,39 +1,37 @@
 package com.company;
-
-import java.util.Scanner;
-
+ //figMD coding Round
 class Main {
 
     public static void main(String[] args) {
-        /*Scanner sc= new Scanner(System.in);
-        String s= sc.nextLine();*/
-        String s= "abceade";
-        System.out.println(subString(s));
+      int[] array = {1,17,9,3,5,7,12,17,11,18,19};
+        findIndex(array);
 
     }
+     static void findIndex(int[] array) {
+         boolean flag = false;
+         int[] prime = new int[array.length];
+         int k = 0;
+         for (int i = 0; i < array.length; i++) {
+             for (int j = 2; j < array[i] / 2; j++) {
+                 if (array[i] % j == 0) {
+                     prime[k++] = array[i];
+                     //flag= true;
+                     // System.out.println( array[i]+"  is a prime number");
+                 }
+             }
+             if (flag != true) {
+                 System.out.println(array[i] + "  is not a prime number");
 
-    private static int subString(String s) {
-        int res =0;
-        char[] sa= s.toCharArray();
-        int n1=0;
-        int n2=0;
+             }
+         }
+         //  System.out.println(array[i]);
+     }
+          //if (flag==false){
+          //    System.out.println("given number is not pressent in array");
+         // }
 
-        for (int i=1; i<s.length(); i++){
-            n1=0;
-            for(int j =i-1; j>=0; j--){
-                if(sa[i]==sa[j]){
-                    res= Math.max(n1, n2);
-                    }
-                else {
-                    n1++;
-                    if (n1>n2){
-                        n2=n1;
-                    }
-                }
-            }
-        }
-        return n2;
-    }
+
+
 }
 
 

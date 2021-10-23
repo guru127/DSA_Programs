@@ -1,4 +1,4 @@
-package com.company;
+package com.company.arrays;
 
 public class Fibonacci {
     public static void fab(int n){

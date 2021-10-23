@@ -1,4 +1,4 @@
-package com.company;
+package com.company.strings;
 
 public class BinaryToDec {
     public static void main(String[] args) {
